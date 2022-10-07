@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehber Uygulaması</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="skeleton/normalize.css">
+    <link rel="stylesheet" href="skeleton/skeleton.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Rehber Uygulaması</h1>
+    <div class="bilgi bilgi--success">Başarılı</div>
+    
+    <div class="bilgi bilgi--error">Hata Çıktı</div>
+    
+    <form action="form-rehber">
+        <div>
+            <label for="ad">Adı</label>
+            <input type="text" id="ad" class="u-full-width">
+        </div>
+        <div>
+            <label for="soyad">Soyad</label>
+            <input type="text" id="soyad" class="u-full-width">
+        </div>
+        <div>
+            <label for="mail">Soyad</label>
+            <input type="text" id="mail" class="u-full-width">
+        </div>
+        <div>
+            <input type="submit" value="kaydet" class="button-primary u-full-width">
+        </div>
+    </form>
+
+    <hr>
+
+    <table class="u-full-width">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Email</th>
+                <th>İşlem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Emre</td>
+                <td>Altun</td>
+                <td>eeee@aaa.com</td>    
+                <td>
+                    <button class="btn btn--edit"><i class="far fa-edit"></i></button>
+                    <button class="btn btn--delete"><i class="far fa-trash-alt"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Emre</td>
+                <td>Altun</td>
+                <td>eeee@aaa.com</td>    
+                <td>
+                    <button class="btn btn--edit"><i class="far fa-edit"></i></button>
+                    <button class="btn btn--delete"><i class="far fa-trash-alt"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Emre</td>
+                <td>Altun</td>
+                <td>eeee@aaa.com</td>    
+                <td>
+                    <button class="btn btn--edit"><i class="far fa-edit"></i></button>
+                    <button class="btn btn--delete"><i class="far fa-trash-alt"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Emre</td>
+                <td>Altun</td>
+                <td>eeee@aaa.com</td>    
+                <td>
+                    <button class="btn btn--edit"><i class="far fa-edit"></i></button>
+                    <button class="btn btn--delete"><i class="far fa-trash-alt"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
