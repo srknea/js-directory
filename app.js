@@ -8,6 +8,7 @@ const form = document.getElementById('form-rehber');
 const kisiListesi = document.querySelector('.kisi-listesi')
 
 // event listenerların tanımlanması
+//kaydet
 form.addEventListener('submit', e =>{
     e.preventDefault();
     const eklenecekKisi = {
@@ -27,6 +28,35 @@ form.addEventListener('submit', e =>{
 
 });
 
+//kisi işlemlerini yap
+kisiListesi.addEventListener('click', e =>{
+    //console.log(e.target);
+    
+    if(e.target.classList.contains('btn--delete')){
+        //console.log("Silme");
+        const silinecekTr = e.target.parentElement.parentElement;
+        const silinecekTrMail = e.target.parentElement.previousElementSibling.textContent; //butonun parent'ına gittik sonra ondan bir önceki elemente gittik ve maili bulduk
+        rehberdenSil(silinecekTr,silinecekTrMail); //argüman olarak tr 'yi yolladık
+    } else if(e.target.classList.contains('btn--edit')){
+        //console.log("Düzenleme");
+
+    } 
+})
+
+function rehberdenSil(silinecekTrElementi, silinecekTrMaili){
+    silinecekTrElementi.remove();
+    //console.log(silinecekTrElementi);
+    //console.log(silinecekTrMaili);
+
+    //maile göre diziden silme işlemi
+    tumKisilerDizisi.forEach((kisi, index) =>{
+        if(kisi.mail === silinecekTrMaili){
+            tumKisilerDizisi.splice(index,1);
+            //console.log(tumKisilerDizisi);
+        }
+    });
+}
+    
 // tüm kişiler için dizi
 const tumKisilerDizisi = [];
 
@@ -47,9 +77,8 @@ function kisiyiEkle(object){
     tumKisilerDizisi.push(object);
 
     bilgiOluştur('Kisi rehbere kaydedildi.', true);
-    console.log(tumKisilerDizisi);
+    //console.log(tumKisilerDizisi);
 }
-
 
 function verileriKontrolEt(kisi){
     //hata kontrolu
@@ -73,8 +102,6 @@ function verileriKontrolEt(kisi){
         mesaj: ''
     }
 }
-
-
 
 function bilgiOluştur(mesaj, durum){
     const olusturulanBilgi = document.createElement('div');

@@ -27,3 +27,12 @@
 .bilgi--error{
     border: 1px solid red;
 }
+
+.far{
+    pointer-events: none;
+    /*
+    <button class="btn btn--edit"><i class="far fa-edit"></i></button>
+    Yukarıdaki yapıya tıklayınca 
+    i 'nin tıklanmasını değil de butounun tetıklenmesını istedik...
+    */
+}
